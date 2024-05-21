@@ -1,55 +1,110 @@
-body {
-    font-family: Arial, sans-serif;
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-header {
-    background-color: #F40009;
-    color: white;
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.logo_header {
+    width: 70px;
+    margin-right: 72px;
+    height: auto; 
+}
+
+.container{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+}
+
+nav{
+    display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 12px;
+    background-color: rgb(0, 37, 255);
 }
 
-header .logo img {
-    height: 50px;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+ul{
     display: flex;
+    list-style: none;
+    gap: 24px;
 }
 
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
+li a {
     color: white;
+    font-weight: 700;
+    font-size: 16px;
     text-decoration: none;
 }
 
-section {
-    padding: 20px;
-    text-align: center;
+li a:hover{
+    color: rgba(255, 255, 255, 0.555);
 }
 
-section#products {
+nav button {
+    margin-left: auto;
+    padding: 4px 24px;
+    border: 1px solid white;
+    border-radius: 32px;
+    background-color: rgb(0, 37, 255);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+nav button:hover{
+    background-color: white;
+    color: rgb(0, 37, 255);
+}
+
+.vid1 {
+    width: 100%;
+    height: fit-content;
+}
+
+section{
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 24px;
+    background-color: black;
+    color: white;
 }
 
-.product {
+section h1{
+    font-size: 72px;
+}
+
+section h2{
+    font-size: 48px;
+}
+
+section button {
+    background-color: rgb(0, 37, 255);
+    font-size: 36px;
+    padding: 16px 36px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    margin-top: 36px;
+    cursor: pointer;
+}
+
+.black{
     text-align: center;
+    background-color: black;
+    color: rgb(0, 37, 255);
+    font-size: 36px;
+    font-weight: 700;
+    padding: 8px 0;
 }
 
 footer {
-    background-color: #F40009;
+    background-color: rgb(0, 37, 255);
+    padding: 24px;
+    height: fit-content;
     color: white;
-    text-align: center;
-    padding: 10px 0;
 }
