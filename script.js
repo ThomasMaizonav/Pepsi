@@ -1,7 +1,9 @@
-function imgSlider(anything) {
-    document.querySelector('.pepsi').src = anything
+function imgSlider(imageSrc, color) {
+    document.querySelector('.pepsi').src = imageSrc
+    changeColor(color)
 }
+
 function changeColor(color) {
     const sec = document.querySelector('.sec')
-    sec.background = color
+    sec.style.background = color
 }

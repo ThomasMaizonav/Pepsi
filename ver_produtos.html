@@ -7,10 +7,11 @@
     <title>Produtos Pepsi</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container sec"> <!-- Certifique-se de que 'sec' está aqui -->
         <nav>
-            <img src="assets/Pepsi_2023.png" alt="Pepsi" class="logo_header">
-            <ul>
+            <a href="index.html">
+                <img src="assets/Pepsi_2023.png" alt="Pepsi" class="logo_header">
+            </a>            <ul>
                 <li>
                     <a href="ver_produtos.html">Ver Produtos</a>
                 </li>
@@ -18,31 +19,37 @@
                     <a href="#">Pepsi125</a>
                 </li>
                 <li>
-                    <a href="#">Nos Contatar</a>
+                    <a href="contatar.html">Nos Contatar</a>
                 </li>
             </ul>
             <button>Comprar Novos Produtos</button>
         </nav>
-    </div>
 
-    <div class="content">
-        <div class="textBox">
-            <h2>Isso é o que eu <br><span>GOSSSTTOOO</span></h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, repudiandae molestiae dolorum culpa harum corporis aliquid sunt. 
-                Nemo voluptatibus magnam quibusdam cumque doloremque accusamus laudantium, cupiditate dignissimos deleniti vel quisquam.</p>
-            <a href="#">Ver Todos Os Produtos</a>
-        </div>        
-        <div class="imgBox">
-            <img src="assets/pepsi.png" alt="Pepsi Original" class="pepsi">
-        </div>
-        <div class="thumb">
-            <li><img src="assets/pepsi.png" alt="Pepsi Azul" onclick="imgSlider('pepsi.png'); changeColor('blue')"></li>
-            <li><img src="assets/pepsidiet.png" alt="Pepsi Cinza" onclick="imgSlider('pepsidiet.png');"></li>
-            <li><img src="assets/pepsizero.png" alt="Pepsi Preta" onclick="imgSlider('pepsizero.png');" ></li>
+        <div class="content">
+            <div class="textBox">
+                <h2>Isso é o que eu <br><span><br>GOSSSTTOOO</span></h2><br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, repudiandae molestiae dolorum culpa harum corporis aliquid sunt. 
+                    Nemo voluptatibus magnam quibusdam cumque doloremque accusamus laudantium, cupiditate dignissimos deleniti vel quisquam.</p>
+                <a href="#">Isso é o que eu gosto</a>
+            </div>        
+            <div class="imgBox">
+                <img src="assets/pepsi.png" alt="Pepsi Original" class="pepsi">
+            </div>
+            <div class="thumb">
+                <ul>
+                    <li><img src="assets/pepsi.png" alt="Pepsi Azul" onclick="imgSlider('assets/pepsi.png', 'rgb(0, 37, 255)')"></li>
+                    <li><img src="assets/pepsidiet.png" alt="Pepsi Cinza" onclick="imgSlider('assets/pepsidiet.png', '#808080')"></li>
+                    <li><img src="assets/pepsizero.png" alt="Pepsi Preta" onclick="imgSlider('assets/pepsizero.png', '#1e1e1e')"></li>
+                </ul>
+            </div>
         </div>
     </div>
 
     <script src="script.js"></script>
 
+    <footer>
+        <img class="pepsimaximg" src="assets/pepsimax.jpg" alt="">
+    </footer>
+    
 </body>
 </html>
