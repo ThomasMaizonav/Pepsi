@@ -11,7 +11,12 @@ body{
 .logo_header {
     width: 70px;
     margin-right: 72px;
-    height: auto; 
+    height: auto;
+    transition: transform 2s;
+}
+
+.logo_header:hover {
+    transform: rotate(360deg);
 }
 
 .container{
@@ -253,10 +258,16 @@ footer {
     justify-content: center;
 }
 
-.logos__pepsi{
-    margin-right: 50px;
+.logos__pepsi {
     width: 300px;
+    margin-right: 50px;
     height: auto;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.logos__pepsi.expandida {
+    width: 600px;
 }
 
 /*A partir daqui é o contatar*/
