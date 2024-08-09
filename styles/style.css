@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -19,9 +19,11 @@ body{
     transform: rotate(360deg);
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .sec {
@@ -31,14 +33,14 @@ body{
     height: 100%;
 }
 
-nav{
+nav {
     display: flex;
     align-items: center;
     padding: 12px;
     background-color: rgb(0, 37, 255);
 }
 
-ul{
+ul {
     display: flex;
     list-style: none;
     gap: 24px;
@@ -51,7 +53,7 @@ li a {
     text-decoration: none;
 }
 
-li a:hover{
+li a:hover {
     color: rgba(255, 255, 255, 0.555);
 }
 
@@ -67,17 +69,20 @@ nav button {
     cursor: pointer;
 }
 
-nav button:hover{
+nav button:hover {
     background-color: white;
     color: rgb(0, 37, 255);
 }
 
-.vid1 {
-    width: 100%;
-    height: fit-content;
+.vid1,
+.vid2,
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-section{
+section {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -86,17 +91,19 @@ section{
     color: white;
 }
 
-section h1{
-    font-size: 72px;
+section h1 {
+    font-size: 56px;
+    text-align: center;
 }
 
-section h2{
-    font-size: 48px;
+section h2 {
+    font-size: 36px;
+    text-align: center;
 }
 
 section button {
     background-color: rgb(0, 37, 255);
-    font-size: 36px;
+    font-size: 28px;
     padding: 16px 36px;
     border: none;
     color: white;
@@ -105,7 +112,7 @@ section button {
     cursor: pointer;
 }
 
-.black{
+.black {
     text-align: center;
     background-color: black;
     color: rgb(0, 37, 255);
@@ -117,49 +124,48 @@ section button {
 footer {
     background-color: black;
     padding: 24px;
-    height: fit-content;
     color: white;
     display: flex; 
     justify-content: center; 
     align-items: center; 
     gap: 50px;
+    flex-wrap: wrap;
 }
 
-/*A partir daqui é o ver_produtos.html*/
 .content {
     position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1; 
+    flex-direction: column;
     padding: 50px;
 }
 
 .content .textBox {
-    position: relative;
-    max-width: 600px;
+    max-width: 100%;
+    text-align: center;
 }
 
-.content .textBox h2{
+.content .textBox h2 {
     color: black;
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 1.5rem;
     font-weight: 900;
     text-transform: uppercase;
 }
 
-.content .textBox h2 span{
+.content .textBox h2 span {
     font-size: 2rem;
     color: #0e0e33;
 }
 
 .content .textBox p {
-    font-size: larger;
+    font-size: 1rem;
     color: black;
 }
 
-.content .textBox a{
+.content .textBox a {
     display: inline-block;
     margin-top: 20px;
     padding: 8px 20px;
@@ -172,40 +178,33 @@ footer {
     text-transform: uppercase;
 }
 
-.content .imgBox{
-    width: 600px;
-    display: flex;
-    padding-right: 50px;
+.content .imgBox {
+    max-width: 100%;
     margin-top: 50px;
-    justify-content: flex-end;
-}
-
-.content .imgBox .img{
-    max-width: 260px;
-}
-
-.thumb{
-    position: absolute;
-    left: 50%;
-    bottom: 20px;
-    transform: translateX(-50%);
     display: flex;
+    justify-content: center;
+}
+
+.thumb {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .thumb li {
     list-style: none;
-    display: inline-block;
-    margin: 0 20px;
     cursor: pointer;
     transition: 0.5s;
 }
 
-.thumb li:hover {
-    transform: translateY(-15px);
+.thumb li img {
+    max-width: 40px;
 }
 
-.thumb li img{
-    max-width: 40px;
+.thumb li:hover {
+    transform: translateY(-15px);
 }
 
 .pepsimaximg {
@@ -215,7 +214,6 @@ footer {
     gap: 50px; 
 }
 
-/*A partir daqui é o pepsi125*/
 .linha_do_tempo {
     text-align: center;
     margin-top: 30px;
@@ -239,7 +237,7 @@ footer {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
-    border: 2px solid #0077cc; /* Adicionando borda azul */
+    border: 2px solid #0077cc;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: 0.5s;
 }
@@ -248,19 +246,15 @@ footer {
     color: #0077cc;
 }
 
-.timeline__historia:last-child {
-    margin-bottom: 0;
-}
-
-.logos__container{
+.logos__container {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .logos__pepsi {
     width: 300px;
-    margin-right: 50px;
     height: auto;
     transition: 0.5s;
     cursor: pointer;
@@ -269,8 +263,6 @@ footer {
 .logos__pepsi.expandida {
     width: 600px;
 }
-
-/*A partir daqui é o contatar*/
 
 .perfil {
     display: flex;
@@ -313,4 +305,55 @@ footer {
 .social img {
     width: 40px;
     height: auto;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .section h1 {
+        font-size: 48px;
+    }
+
+    .section h2 {
+        font-size: 32px;
+    }
+
+    .section button {
+        font-size: 24px;
+        padding: 12px 28px;
+    }
+
+    .content .textBox h2 {
+        font-size: 2.5rem;
+    }
+
+    .content .textBox h2 span {
+        font-size: 1.5rem;
+    }
+
+    .content .imgBox {
+        max-width: 90%;
+    }
+
+    .timeline {
+        max-height: 400px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .content {
+        flex-direction: row;
+    }
+
+    .content .imgBox {
+        width: 600px;
+    }
+
+    .logos__pepsi {
+        width: 300px;
+    }
 }
